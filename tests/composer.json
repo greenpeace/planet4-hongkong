@@ -1,0 +1,23 @@
+{
+	"name": "greenpeace/planet4-base-tests",
+	"description": "Tests for the Greenpeace Planet4 NRO application",
+	"license": "GPL-3.0-or-later",
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://packagist.org"
+		}
+	],
+	"require": {
+	},
+	"config": {
+		"secure-http": false,
+		"github-protocols": ["https"],
+    "platform": {
+      "php": "7.0.32"
+    }
+	},
+	"require-dev": {
+		"lucatume/wp-browser": "^2.2"
+	}
+}
