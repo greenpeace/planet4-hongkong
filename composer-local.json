@@ -3,7 +3,7 @@
 	"description": "Greenpeace P4 Hong Kong",
 	"license": "MIT",
 	"require": {
-		"greenpeace/planet4-child-theme" : "0.2.10"
+		"greenpeace/planet4-child-theme-hongkong" : "0.1"
 	},
 	"scripts": {
 		"site:custom" : []
