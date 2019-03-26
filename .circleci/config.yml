@@ -46,27 +46,27 @@ job_definitions:
   build_steps: &build_steps
     working_directory: ~/
     steps:
-      - setup_remote_docker
+      - setup_remote_docker:
+          docker_layer_caching: true
       - restore_cache:
           keys:
-            - composer-v1-{{ .Branch }}-{{ .Revision }}-{{ .BuildNum }}
-            - composer-v1-{{ .Branch }}-{{ .Revision }}
-            - composer-v1-{{ .Branch }}
-            - composer-v1
+            - composer-v5-{{ .Branch }}-{{ .Revision }}-{{ .BuildNum }}
+            - composer-v5-{{ .Branch }}-{{ .Revision }}
+            - composer-v5-{{ .Branch }}
+            - composer-v5
       - run: |
           if [[ -d source/cache ]]; then ls -al source/cache; fi
       - run: activate-gcloud-account.sh
       - run: mkdir -p /tmp/workspace/var
       - run: mkdir -p /tmp/workspace/src
       - run: echo "${CIRCLE_BUILD_NUM}" > /tmp/workspace/var/circle-build-num
-
       - run: make
       - run:
           name: Notify failure
           when: on_fail
           command: TYPE="Build" notify-job-failure.sh
       - save_cache:
-          key: composer-v1-{{ .Branch }}-{{ .Revision }}-{{ .BuildNum }}
+          key: composer-v5-{{ .Branch }}-{{ .Revision }}-{{ .BuildNum }}
           paths:
             - source/cache
       - persist_to_workspace:
@@ -79,18 +79,11 @@ job_definitions:
     working_directory: /tmp/workspace/src
     steps:
       - checkout
-      - attach_workspace:
-          at: /tmp/workspace
       - run: release-prepare-nro.sh
       - run:
           name: Notify failure
           when: on_fail
           command: TYPE="Prepare" notify-job-failure.sh
-      - persist_to_workspace:
-          root: /tmp/workspace
-          paths:
-            - var
-            - src
 
   notify_promote: &notify_promote
     working_directory: ~/project
@@ -115,14 +108,9 @@ job_definitions:
             notify-job-hold.sh
 
   finish_release: &finish_release
-    working_directory: /tmp/workspace/src
     steps:
-      - attach_workspace:
-          at: /tmp/workspace
       - checkout
-      - run: increment-version.sh "$(git-current-tag.sh)" | tee /tmp/workspace/var/new_release
       - run: release-finish.sh
-      - run: git push origin --delete release/$(cat /tmp/workspace/var/new_release)
       - run:
           name: Notify failure
           when: on_fail
@@ -320,12 +308,12 @@ workflows:
           - notify-promote
   tag:
     jobs:
-    - build-tag:
-        <<: *tag_common
-    - deploy-tag:
-        <<: *tag_common
-        requires:
-          - build-tag
+      - build-tag:
+          <<: *tag_common
+      - deploy-tag:
+          <<: *tag_common
+          requires:
+            - build-tag
 
   create-sync-sql:
     jobs:
