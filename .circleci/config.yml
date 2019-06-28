@@ -2,7 +2,7 @@ version: 2
 
 defaults: &defaults
   docker:
-    - image: gcr.io/planet-4-151612/p4-builder:latest
+    - image: greenpeaceinternational/p4-builder:latest
 
 job_environments:
   common_environment: &common_environment
@@ -37,8 +37,7 @@ job_environments:
     GOOGLE_PROJECT_ID: planet4-production
     HELM_NAMESPACE: hongkong
     HELM_RELEASE: planet4-hongkong-master
-    MIN_REPLICA_COUNT: 1
-    MAX_REPLICA_COUNT: 1
+    MIN_REPLICA_COUNT: 2
     NEWRELIC_APPNAME: P4 Hong Kong Production
     WP_DB_NAME: planet4-hongkong_wordpress_master
     WP_STATELESS_BUCKET: planet4-hongkong-stateless
