@@ -25,7 +25,7 @@ job_environments:
     WP_DB_NAME: planet4-hongkong_wordpress_release
     WP_STATELESS_BUCKET: planet4-hongkong-stateless-release
   production_environment: &production_environment
-    APP_HOSTNAME: master.k8s.p4.greenpeace.org
+    APP_HOSTNAME: www.greenpeace.org
     CLOUDSQL_INSTANCE: planet4-prod
     GCLOUD_CLUSTER: planet4-production
     GOOGLE_PROJECT_ID: planet4-production
