@@ -519,18 +519,6 @@ workflows:
           requires:
             - sync-sql-to-release
 
-  notify-sync-auto:
-    triggers:
-      - schedule:
-          cron: "10 02 28 * *"
-          filters:
-            branches:
-              only:
-                - master
-    jobs:
-      - notify-sync-auto:
-          context: org-global
-
   backup:
     triggers:
       - schedule:
