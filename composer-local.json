@@ -3,8 +3,8 @@
 	"description": "Greenpeace P4 Hong Kong",
 	"license": "MIT",
 	"require": {
-		"greenpeace/planet4-child-theme-hongkong" : "0.5.8.3",
-		"greenpeace/planet4-gpea-plugin-blocks": "0.3.6.1",
+		"greenpeace/planet4-child-theme-hongkong" : "0.5.9.2",
+		"greenpeace/planet4-gpea-plugin-blocks": "0.3.6.3",
 		"greenpeace/planet4-plugin-migrated-urls": "0.0.1"
 	},
 	"scripts": {
