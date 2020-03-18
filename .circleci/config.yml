@@ -13,7 +13,7 @@ parameters:
 
 defaults: &defaults
   docker:
-    - image: greenpeaceinternational/p4-builder:latest
+    - image: greenpeaceinternational/p4-builder:legacy
 
 job_environments:
   common_environment: &common_environment
