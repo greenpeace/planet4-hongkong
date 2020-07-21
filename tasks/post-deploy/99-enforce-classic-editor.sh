@@ -2,7 +2,6 @@
 
 # Deactivate p4 gutenberg plugins
 wp plugin deactivate planet4-plugin-gutenberg-blocks
-wp plugin deactivate planet4-plugin-gutenberg-engagingnetworks
 
 # Set classic editor as the default editor
 wp option update classic-editor-replace 'classic'
