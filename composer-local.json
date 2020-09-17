@@ -5,10 +5,7 @@
 	"require": {
 		"greenpeace/planet4-child-theme-hongkong" : "0.5.13.8",
 		"greenpeace/planet4-gpea-plugin-blocks": "0.3.8.3",
-		"greenpeace/planet4-plugin-migrated-urls": "0.0.1",
-		"greenpeace/planet4-master-theme" : "v1.63.1",
-		"greenpeace/planet4-plugin-blocks" : "v1.62",
-		"greenpeace/planet4-plugin-engagingnetworks" : "v2.16",
+		"greenpeace/planet4-plugin-engagingnetworks" : "v2.19",
 		"wpackagist-plugin/classic-editor": "1.*",
 		"wpackagist-plugin/shortcode-ui": "0.*"
 	},
