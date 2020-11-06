@@ -24,7 +24,7 @@ job_environments:
     CONTAINER_PREFIX: planet4-hongkong
   develop_environment: &develop_environment
     APP_ENVIRONMENT: development
-    APP_HOSTNAME: k8s.p4.greenpeace.org
+    APP_HOSTNAME: www-dev.greenpeace.org
     CLOUDSQL_INSTANCE: p4-develop-k8s
     GOOGLE_PROJECT_ID: planet-4-151612
     GCLOUD_CLUSTER: p4-development
@@ -37,7 +37,7 @@ job_environments:
     GOOGLE_PROJECT_ID: planet4-production
   release_environment: &release_environment
     APP_ENVIRONMENT: staging
-    APP_HOSTNAME: release.k8s.p4.greenpeace.org
+    APP_HOSTNAME: www-stage.greenpeace.org
     CLOUDSQL_INSTANCE: planet4-prod
     GCLOUD_CLUSTER: planet4-production
     GOOGLE_PROJECT_ID: planet4-production
