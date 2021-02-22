@@ -1,18 +1,18 @@
 {
-	"name": "greenpeace/planet4-hongkong",
-	"description": "Greenpeace P4 Hong Kong",
-	"license": "MIT",
-	"require": {
-		"greenpeace/planet4-child-theme-hongkong" : "dev-develop",
-		"greenpeace/planet4-gpea-plugin-blocks": "dev-develop",
-		"greenpeace/planet4-plugin-engagingnetworks" : "v2.19",
-		"wpackagist-plugin/classic-editor": "1.*",
-		"wpackagist-plugin/shortcode-ui": "0.*"
-	},
-	"scripts": {
-		"core:language": "wp language core install --activate zh_HK",
-		"site:custom": [
-			"@core:language"
-		]
-	}
+    "name": "greenpeace/planet4-hongkong",
+    "description": "Greenpeace P4 Hong Kong",
+    "license": "MIT",
+    "require": {
+        "greenpeace/planet4-child-theme-hongkong" : "dev-develop",
+        "greenpeace/planet4-gpea-plugin-blocks": "dev-develop",
+        "greenpeace/planet4-plugin-engagingnetworks" : "v2.19",
+        "wpackagist-plugin/classic-editor": "1.*",
+        "wpackagist-plugin/shortcode-ui": "0.*"
+    },
+    "scripts": {
+        "core:language": "wp language core install --activate zh_HK",
+        "site:custom": [
+            "@core:language"
+        ]
+    }
 }
