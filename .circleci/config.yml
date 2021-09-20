@@ -350,7 +350,7 @@ jobs:
       <<: *common_environment
       <<: *release_environment
     <<: *finish_staging_steps
-  
+
   rollback-staging:
     <<: *defaults
     environment:
