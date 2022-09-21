@@ -36,7 +36,7 @@ job_environments:
     CLOUDSQL_INSTANCE: planet4-prod
     GCLOUD_CLUSTER: planet4-production
     GOOGLE_PROJECT_ID: planet4-production
-    HELM_NAMESPACE: hongkong
+    HELM_NAMESPACE: hongkong-staging
     HELM_RELEASE: planet4-hongkong-release
     WP_DB_NAME: planet4-hongkong_wordpress_release
     WP_STATELESS_BUCKET: planet4-hongkong-stateless-release
