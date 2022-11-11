@@ -46,6 +46,7 @@ job_environments:
     GCLOUD_CLUSTER: planet4-production
     GOOGLE_PROJECT_ID: planet4-production
     HELM_NAMESPACE: hongkong
+    MIN_REPLICA_COUNT: 2
     HELM_RELEASE: planet4-hongkong-master
     WP_DB_NAME: planet4-hongkong_wordpress_master
     WP_STATELESS_BUCKET: planet4-hongkong-stateless
