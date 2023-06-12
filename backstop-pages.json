@@ -1,22 +1,27 @@
 {
   "scenarios": [
     {
-      "label": "Planet4 Hong Kong act page",
-      "url": "https://APP_HOSTNAME/APP_HOSTPATH/make-change/",
-      "delay": 3000,
-      "misMatchThreshold": 1.5
+      "url": "https://APP_HOSTNAME/APP_HOSTPATH/",
+      "label": "NRO Home",
+      "removeSelectors": [
+        ".page-template"
+      ],
+      "selectors": [
+        "header",
+        "footer"
+      ]
     },
     {
-      "label": "Planet4 Hong Kong explore page",
-      "url": "https://APP_HOSTNAME/APP_HOSTPATH/from-the-earth/",
-      "delay": 3000,
-      "misMatchThreshold": 1.5
-    },
-    {
-      "label": "Planet4 Hong Kong privacy and cookies page",
-      "url": "https://APP_HOSTNAME/APP_HOSTPATH/policies/privacy-and-cookies/",
-      "delay": 3000,
-      "misMatchThreshold": 1.5
+      "label": "NRO Search",
+      "url": "https://APP_HOSTNAME/APP_HOSTPATH/?s=",
+      "removeSelectors": [
+        "header",
+        "footer"
+      ],
+      "selectors": [
+        "#search_form_inner",
+        ".filters-selects"
+      ]
     }
   ]
 }
