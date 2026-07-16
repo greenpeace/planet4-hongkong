@@ -5,7 +5,6 @@
   "require": {
     "greenpeace/planet4-child-theme-hongkong" : "dev-develop",
     "greenpeace/planet4-gpea-plugin-blocks": "dev-develop",
-    "greenpeace/gpea-planet8-child-theme" : "dev-develop",
     "wpackagist-plugin/classic-editor": "1.*",
     "wpackagist-plugin/shortcode-ui": "0.*",
     "wpackagist-plugin/easy-table-of-contents":"2.0.*",
@@ -18,9 +17,5 @@
       "@core:language",
       "@install:plugin-yoast"
     ]
-  },
-  "repositories": [{
-    "type": "vcs",
-    "url": "https://github.com/greenpeace/gpea-planet8-child-theme"
-    }]
   }
+}
