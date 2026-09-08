@@ -1,6 +1,0 @@
-{
-  "require": {
-    "greenpeace/planet4-child-theme-hongkong" : "dev-PLANET-8231_timber_upgrade_v2",
-    "greenpeace/planet4-gpea-plugin-blocks": "dev-PLANET-8231_timber_upgrade_v2"
-  }
-}
